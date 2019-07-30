@@ -1,0 +1,44 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/list/list",
+        "pages/message/message",
+        "pages/profile/profile"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#ffbd3f",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "Smile mom",
+        "backgroundColor": "#bcc0c9",
+        "backgroundTextStyle": "light",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "color": "#b2b2b2",
+        "selectedColor": "#444",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "assets/tabs/home.jpg",
+                "selectedIconPath": "assets/tabs/home-active.jpg"
+            },
+            {
+                "pagePath": "pages/message/message",
+                "text": "收藏",
+                "iconPath": "assets/tabs/collect.jpg",
+                "selectedIconPath": "assets/tabs/collect-active.jpg"
+            },
+            {
+                "pagePath": "pages/profile/profile",
+                "text": "我的",
+                "iconPath": "assets/tabs/profile.png",
+                "selectedIconPath": "assets/tabs/profile-active.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

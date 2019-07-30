@@ -1,0 +1,104 @@
+<!-- 搜索框 -->
+<view class="search-top">
+    <view class="search">
+        <icon type="search" class="search-img" size="16" color="#ffbd3f"></icon>
+        <input class='input' confirm-type="search" maxlength="30" bindinput='wxSearchInput' value='{{keyword}}' bindconfirm='wxSearchFn' bindfocus="wxSerchFocus" bindblur="wxSearchBlur" placeholder='请输入搜索内容'></input>
+        <icon type="clear" size="16" class="xximg" wx:if="{{ searchxx }}" bindtap="onBingTop"></icon>
+    </view>
+    <button class='btn' bindtap="wxSearchFn" hover-class='button-hover'>搜索</button>
+    <navigator bindtap="bindViewTap" hover-class="none">
+        <image src="/assets/images/camera.png" mode="aspectFill" />
+    </navigator>
+</view>
+
+<view wx:if="{{ containershow }}" class="neiwai">
+    <!-- 轮播图 -->
+    <swiper class="slides" autoplay="true" interval="3000" duration="1000" circular="true" indicator-dots>
+        <swiper-item>
+            <image src="/assets/images/banner01.png" mode="aspectFill" />
+        </swiper-item>
+        <swiper-item>
+            <image src="/assets/images/banner01.png" mode="aspectFill" />
+        </swiper-item>
+    </swiper>
+
+
+    <!-- 热门 -->
+    <view class="grids">
+        <navigator hover-class="none" url="/pages/list/list?cat={{ item.id }}" class="item" wx:for="{{ categories }}" wx:key="id">
+            <image src="/assets/icons/hot01.png" mode="aspectFill" />
+            <text class="collect"> {{ item.name }}</text>
+        </navigator>
+
+
+        <!-- <navigator  hover-class="none" url="/pages/list/list?id=2" class="item">
+            <image src="/assets/icons/hot02.png"/>
+            <text>Nicer Dicer</text>
+        </navigator>
+        <navigator  hover-class="none" url="/pages/list/list?id=3" class="item">
+            <image src="/assets/icons/hot03.png"/>
+            <text>Sporalizer</text>
+        </navigator>
+        <navigator  hover-class="none" url="/pages/list/list?id=4" class="item">
+            <image src="/assets/icons/hot04.png"/>
+            <text>Grater</text>
+        </navigator>
+        <navigator  hover-class="none" url="/pages/list/list?id=5" class="item">
+            <image src="/assets/icons/hot05.png"/>
+            <text>Salad Spinner</text>
+        </navigator> -->
+    </view>
+
+
+    <!-- 产品展示 -->
+    <view class="links">
+        <view class="item" wx:for="{{ products }}" wx:key="id">
+            <image src="{{ item.imgUrl }}" />
+            <view class="item.sc">
+                <text>{{ item.itemno }}\n{{ item.itemno }}</text>
+                <view class="danjia">
+                    <text class="danjia_left">USD{{ item.two_thousandPrice }}/set \n（MOQ:2000sets）</text>
+                    <text class="danjia_right">USD{{ item.three_thousandPrice }}/set \n（MOQ:3000sets）</text>
+                </view>
+                <text class="shoucang" bindtap="showlayer">Collection</text>
+                <view class="shadow-layer" catchtouchmove="aaa" hidden="{{ !isshowlayer }}">
+                    <view style="height:270rpx;width:500rpx;background:#fff;border-radius:10rpx;position:absolute;top:40%;left:15%;">
+                        <navigator bindtap="hiddenlayer" style="position:absolute;top:5rpx;right:5rpx;width:24rpx;height:24rpx;text-align:center;line-height:16rpx;border:1rpx solid #787878;border-radius:24rpx;padding:5rpx;background:#787878;color:#fff;font-width:200;">
+                            x
+                        </navigator>
+                        <text class="danjia_left">USD{{ item.two_thousandPrice }}/set \n（MOQ:2000sets）</text>
+                        <text class="danjia_right">USD{{ item.three_thousandPrice }}/set \n（MOQ:3000sets）</text>
+                        <view bindtap="shouCang" style="height:50rpx;width:200rpx;background-color:#646464;color:#fff;border-radius:10rpx;dispaly:flex;text-align: center;position:absolute;bottom:10%;left:30%;line-height:50rpx;">
+                            OK
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+
+        <!-- <view class="item">
+            <image src="/assets/images/links01.png" />
+            <view class="item.sc">
+                <text>A363\nMINI CHOPPER</text>
+                <view class="danjia">
+                    <text class="danjia_left">USD6.5/set \n（MOQ:2000sets）</text> 
+                    <text class="danjia_right">USD6.0/set \n（MOQ:3000sets）</text>
+                </view>
+                <text class="shoucang" bindtap="showlayer">Collection</text>
+                <view class="shadow-layer" catchtouchmove="aaa"  hidden="{{ !isshowlayer }}">
+                    <view style="height:270rpx;width:500rpx;background:#fff;border-radius:10rpx;position:absolute;top:40%;left:15%;">
+                        <navigator bindtap="hiddenlayer" style="position:absolute;top:5rpx;right:5rpx;width:24rpx;height:24rpx;text-align:center;line-height:16rpx;border:1rpx solid #787878;border-radius:24rpx;padding:5rpx;background:#787878;color:#fff;font-width:200;">
+                            x
+                        </navigator>
+                        <text class="danjia_left">USD6.5/set \n（MOQ:2000sets）</text> 
+                        <text class="danjia_right">USD6.0/set \n（MOQ:3000sets）</text>
+                        <navigator bindtap="addCart" style="height:50rpx;width:200rpx;background-color:#646464;color:#fff;border-radius:10rpx;dispaly:flex;text-align: center;position:absolute;bottom:10%;left:30%;line-height:50rpx;">
+                            OK
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </view> -->
+    </view>
+</view>

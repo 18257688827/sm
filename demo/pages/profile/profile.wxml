@@ -1,0 +1,17 @@
+<view class="message">
+    <view class="message-item">
+        <image src="/assets/images/shoucang01.png" />
+        <text class="left">S363\nMINI CHOPPER</text>
+        <text class="right">询价日期\n <text class="min">2019.07.17</text></text>
+    </view>
+    <view class="message-item">
+        <image src="/assets/images/shoucang01.png" />
+        <text class="left">S363\nMINI CHOPPER</text>
+        <text class="right">询价日期\n <text class="min">2019.07.17</text></text>
+    </view>
+    <view class="message-item">
+        <image src="/assets/images/shoucang01.png" />
+        <text class="left">S363\nMINI CHOPPER</text>
+        <text class="right">询价日期\n <text class="min">2019.07.17</text></text>
+    </view>
+</view>

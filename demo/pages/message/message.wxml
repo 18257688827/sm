@@ -1,0 +1,53 @@
+<view class="message">
+    <view class="message-item">
+        <image src="/assets/images/shoucang01.png" />
+        <text class="left">S363\nMINI CHOPPER</text>
+        <text class="right">USD6.0/set\n <text class="min">(MOQ:3000sets)</text></text>
+    </view>
+</view>
+
+
+
+
+
+<view>
+    <view class="end" bindtap="showend">SEND</view>
+    <view class="shadow-end"  catchtouchmove="aaa"  hidden="{{ !isshowend }}">
+        <view class="sales">
+            <view class="sales_top">SALES</view>
+            <image src="/assets/images/lady.png" />
+
+            <!-- user -->
+            <view class="sales_ok" bindtap="showuser">
+                ok
+                <view class="shadow-user" catchtouchmove="aaa"  hidden="{{ !isshowuser }}">
+                    <view class="user">
+                        <view class="max">
+                            <view class="ipt"><input placeholder="COMPSNY" placeholder-style="z-index:-1;" /></view>
+                            <input placeholder="NAME" placeholder-style="z-index:-1;" />
+                            <input placeholder="E-MAIL" placeholder-style="z-index:-1;" />
+                            <input placeholder="TEL" placeholder-style="z-index:-1;" />
+                            <navigator class="camera" bindtap="bindViewTap">
+                                <image src="/assets/images/camera.png" class="userinfo-avatar" />
+                                <text>Upload cards</text>
+                            </navigator>
+                        </view> 
+
+                        <!-- 邮箱 -->
+                        <view class="sales_email" bindtap="showemail">
+                            SEND
+                            <view class="shadow-email"  catchtouchmove="aaa" style="pointer-events:none;"  hidden="{{ !isshowemail }}">
+                                <view class="email">
+                                    <text class="email_top">THANK</text>
+                                    <image src="/assets/images/email.png" />
+                                    <text class="eamil_bottom">Send successfully</text>
+                                </view>
+                                <image src="/assets/images/wxewm.png" class="wxewm" />
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view> 
+    </view>
+</view>

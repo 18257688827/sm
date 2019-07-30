@@ -1,0 +1,195 @@
+
+.loadmore {
+  color: #888;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.loadmore.loading::before {
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: -10rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+  vertical-align: middle;
+  animation: loading 1s steps(12) infinite;
+  background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=) no-repeat;
+  background-size: 100%
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(-360deg)
+  }
+}
+
+
+
+/* 开发 */
+page{
+    background-color: #e6e6e6;
+}
+/* .toubu{
+    width: 100%;
+    height: 56rpx;
+    line-height: 56rpx;
+    text-align: center;
+    font-size: 20rpx;
+    margin: 20rpx auto;
+    background-color: #fff;
+    color: #515151;
+} */
+.container{
+    display: flex; 
+    min-height: 100vh;
+}
+.left{
+    width: 40%;
+    background-color: #3b3b3b;
+
+}
+.left view{
+    height: 100rpx;
+    line-height: 140rpx;
+    border-bottom: 5rpx solid #707070;
+    text-align: center;
+    color: #fff;
+}
+.left view.active{
+    color: #fff;
+    background-color: #ccc;
+}
+
+.right{
+    flex: 1;
+}
+/* ----------------------------- */
+.sales_fenlei image{
+    width: 45rpx;
+    height: 35rpx;
+    position: absolute;
+    top: 20rpx;
+    left: 20rpx;
+}
+.shadow_fenlei{
+    width: 300%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    position:fixed;
+    top:0;
+    left: 0;
+}
+.shadow-fenlei .fenlei{
+    width: 200rpx;
+    height: 100vh;
+    background-color: #3b3b3b;
+    padding:30rpx;
+}
+.shadow-fenlei .fenlei view{
+    width: 200rpx;
+    height: 100rpx;
+    border-bottom: 2rpx solid #ccc;
+    color: #fff;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 130rpx;
+}
+.shadow-fenlei .fenlei view:hover{
+    color: #ffcc00;
+}
+/* 热销 */
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20rpx;
+    background-color: #e6e6e6;
+    z-index: 1;
+}
+.links .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%;
+    height: 420rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 5rpx;
+    box-sizing: border-box;
+}
+.links .item image{
+    width: 300rpx;
+    height: 240rpx;
+}
+.links .item .item.sc{
+    width: 100%;
+    height: 180rpx;
+
+}
+.links .item .item.sc text{
+    width: 100%;
+    text-align: center;
+    font-size: 24rpx;
+}
+.links .item .item.sc .danjia{
+    background-color: #ffcc00;
+    width: 100%;
+    height: 75rpx;
+}
+.links .item .item.sc .danjia text{
+    margin-top: 10rpx;
+    width: 50%;
+    font-size: 20rpx;
+}
+.danjia_left{
+    float: left;
+    box-sizing: border-box;
+    border-right: 1rpx solid #fff;
+}
+.danjia_right{
+    float: right;
+}
+.links .item .item.sc .shoucang{
+    width: 160rpx;
+    height: 40rpx;
+    margin-top: 6rpx;
+    background-color: #787878;
+    border-radius: 7rpx;
+    color: #fff;
+    font-size: 26rpx;
+}
+.sales_fenlei{
+  position: fixed;
+}
+.sales_fenlei image{
+  display: absolute;
+
+}
+
+.links .item .item.sc .shadow-layer .danjia_left,
+.links .item .item.sc .shadow-layer .danjia_right{
+    width: 220rpx;
+    height: 100rpx;
+    background-color: #c5c5c5;
+    border-radius: 10rpx;
+    margin-left: 20rpx;
+    margin-top: 55rpx;
+    display: flex;
+    align-items: left;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.links .item .item.sc .shadow-layer .danjia_right{
+    margin-right: 20rpx;
+}
+
+
+
+.links .item .item.sc .shadow-layer .danjia_left:hover,
+.links .item .item.sc .shadow-layer .danjia_right:hover{
+    background-color: #ffcc00;
+}

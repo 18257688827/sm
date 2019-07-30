@@ -1,0 +1,93 @@
+<view class="sales_fenlei">
+    <view bindtap="showimg">
+        <image src="/assets/icons/fenlei.png" />
+    </view>
+    <view class="shadow-fenlei" hidden="{{ !isshowfenlei }}">
+        <view class="fenlei">
+            <view fenlei_item url="/pages/list/list?cat={{ item.id }}" class="{{ item.id===activeId?'active':'' }}" wx:for="{{ categories}}" wx:key="id">
+                <text>{{ item.name }}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="links">
+    <!-- <view class="item" wx:for="{{ shops }}" sx:key="id">
+        <image src="{{ item.img[0] }}" />
+        <view class="item.sc">
+            <text>{{ item.name }}</text>
+            <view class="danjia">
+                <text class="danjia_left">{{ item.name }}</text> 
+                <text class="danjia_right">{{ item.name }}</text>
+            </view>
+            <text class="shoucang" bindtap="showlayer">Collection</text>
+            <view class="shadow-layer" hidden="{{ !isshowlayer }}">
+                <view style="height:270rpx;width:500rpx;background:#fff;border-radius:10rpx;position:absolute;top:40%;left:15%;">
+                    <view style="position:absolute;top:5rpx;right:5rpx;width:24rpx;height:24rpx;text-align:center;line-height:16rpx;border:1rpx solid #787878;border-radius:24rpx;padding:5rpx;background:#787878;color:#fff;font-width:200;">
+                        x
+                    </view>
+                    <text class="danjia_left">USD6.5/set \n（MOQ:2000sets）</text> 
+                    <text class="danjia_right">USD6.0/set \n（MOQ:3000sets）</text>
+                    <view bindtap="showlayer" style="height:50rpx;width:200rpx;background-color:#646464;color:#fff;border-radius:10rpx;dispaly:flex;text-align: center;position:absolute;bottom:10%;left:30%;line-height:50rpx;">
+                        OK
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view> -->
+
+    <!-- <view class="item" wx:for="{{ goodslist }}">
+        <image src="{{ item.img }}" />
+        <view class="item.sc">
+            <text>{{ goodslist }}\n{{ goodslist }}</text>
+            <view class="danjia">
+                <text class="danjia_left">（{{ goodslist }}） \n（{{ goodslist }}）</text>
+                <text class="danjia_right">（{{ goodslist }}） \n（{{ goodslist }}）</text>
+            </view>
+            <text class="shoucang" bindtap="showlayer">{{ goodslist }}</text>
+            <view class="shadow-layer" catchtouchmove="aaa" hidden="{{ !isshowlayer }}">
+                <view style="height:270rpx;width:500rpx;background:#fff;border-radius:10rpx;position:absolute;top:40%;left:15%;">
+                    <navigator bindtap="hiddenlayer" style="position:absolute;top:5rpx;right:5rpx;width:24rpx;height:24rpx;text-align:center;line-height:16rpx;border:1rpx solid #787878;border-radius:24rpx;padding:5rpx;background:#787878;color:#fff;font-width:200;">
+                        x
+                    </navigator>
+                    <text hover-class="danjia_left">{{ goodslist }} \n（{{ goodslist }}）</text>
+                    <text hover-class="danjia_right">{{ goodslist }} \n（{{ goodslist }}）</text>
+                    <view bindtap="addCart" style="height:50rpx;width:200rpx;background-color:#646464;color:#fff;border-radius:10rpx;dispaly:flex;text-align: center;position:absolute;bottom:10%;left:30%;line-height:50rpx;">
+                        OK1
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view> -->
+
+
+    <view class="item">
+            <image src="/assets/images/links01.png" />
+            <view class="item.sc">
+                <text>A363\nMINI CHOPPER</text>
+                <view class="danjia">
+                    <text class="danjia_left">USD6.5/set \n（MOQ:2000sets）</text> 
+                    <text class="danjia_right">USD6.0/set \n（MOQ:3000sets）</text>
+                </view>
+                <text class="shoucang" bindtap="showlayer">Collection</text>
+                <view class="shadow-layer" catchtouchmove="aaa"  hidden="{{ !isshowlayer }}">
+                    <view style="height:270rpx;width:500rpx;background:#fff;border-radius:10rpx;position:absolute;top:40%;left:15%;">
+                        <navigator bindtap="hiddenlayer" style="position:absolute;top:5rpx;right:5rpx;width:24rpx;height:24rpx;text-align:center;line-height:16rpx;border:1rpx solid #787878;border-radius:24rpx;padding:5rpx;background:#787878;color:#fff;font-width:200;">
+                            x
+                        </navigator>
+                        <text class="danjia_left">USD6.5/set \n（MOQ:2000sets）</text> 
+                        <text class="danjia_right">USD6.0/set \n（MOQ:3000sets）</text>
+                        <navigator bindtap="addCart" style="height:50rpx;width:200rpx;background-color:#646464;color:#fff;border-radius:10rpx;dispaly:flex;text-align: center;position:absolute;bottom:10%;left:30%;line-height:50rpx;">
+                            OK
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </view>
+    
+
+
+</view>
+
+
+<!-- <view wx:if="{{ hasMore }}" class="loadmore loading">正在加载。。。</view> -->
+<!-- <view wx:else class="loadmore">没有更多了</view> -->

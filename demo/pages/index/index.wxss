@@ -1,0 +1,37 @@
+/* pages/logs/logs.wxss */
+
+page{
+    height: 100%;
+    background-color: #ccc;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+    margin:150rpx 0;
+}
+button{
+    font-size: 32rpx;
+    background-color: #ccc;
+    border: 1rpx solid #ffcc00;
+}
+.userName{
+    font-size: 32rpx;
+    font-weight: bold;
+    margin:50rpx 0;
+}
+.goStudy{
+    font-size: 28rpx;
+    border: 1rpx solid #ffcc00;
+    border-radius: 10rpx;
+    width: 250rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+}
